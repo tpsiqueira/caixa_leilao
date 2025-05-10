@@ -1,0 +1,13 @@
+/* frontend/src/layouts/MainLayout.css */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o footer fique no final, mesmo com pouco conteúdo */
+}
+
+.main-content-area {
+  flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço disponível */
+  padding: 20px; /* Adiciona um espaçamento interno nas páginas */
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */ 
+}

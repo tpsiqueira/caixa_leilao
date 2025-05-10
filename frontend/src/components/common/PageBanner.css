@@ -1,0 +1,38 @@
+/* frontend/src/components/common/PageBanner.css */
+.page-banner {
+  background-color: #003366; /* Cor de fallback se não houver imagem */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 8px 8px; /* Cantos arredondados apenas na parte inferior */
+  margin-bottom: 30px;
+}
+
+.page-banner .banner-content h1 {
+  font-size: 2.8em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-banner .banner-content p {
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 40px 20px;
+  }
+  .page-banner .banner-content h1 {
+    font-size: 2.2em;
+  }
+  .page-banner .banner-content p {
+    font-size: 1.1em;
+  }
+}

@@ -1,0 +1,89 @@
+/* frontend/src/components/layout/Header.css */
+.app-header-detailed {
+    background-color: #fff; /* Fundo branco para o header */
+    padding: 15px 30px; /* Aumentando um pouco o padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra mais sutil */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo-container img {
+    height: 35px; /* Ajuste a altura do seu logo */
+    display: block; /* Para evitar espaço extra abaixo da imagem */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; /* Espaçamento entre os itens do menu */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #003366; /* Cor principal para os links de navegação (azul escuro) */
+    font-weight: 500; /* Peso da fonte */
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #0056b3; /* Um azul um pouco mais claro para hover/ativo */
+    background-color: #e6f7ff; /* Fundo azul bem claro */
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: 1px solid #003366;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #003366;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.auth-buttons button.primary {
+    background-color: #003366;
+    color: white;
+}
+
+.auth-buttons button.primary:hover {
+    background-color: #002244; /* Um tom mais escuro para hover */
+}
+
+.auth-buttons button:not(.primary):hover {
+    background-color: #e6f7ff;
+    color: #002244;
+}
+
+/* Adicione media queries para responsividade se necessário */
+@media (max-width: 900px) { /* Ajuste o breakpoint conforme necessário */
+    .main-nav {
+        display: none; /* Esconder o menu principal em telas menores */
+        /* Aqui você implementaria um menu hamburguer/mobile */
+    }
+    .auth-buttons {
+        /* Ajustar botões para telas menores, talvez apenas ícones ou movê-los para o menu mobile */
+    }
+}
+
+@media (max-width: 500px) {
+    .app-header-detailed {
+        padding: 10px 15px;
+    }
+    .logo-container img {
+        height: 30px;
+    }
+    .auth-buttons button {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}
+

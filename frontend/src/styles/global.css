@@ -1,0 +1,396 @@
+/* frontend/src/styles/global.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Um cinza claro para o fundo, similar ao site de referência */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Estilos básicos para links */
+a {
+  color: #1890ff; /* Um azul comum para links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para um container principal, se necessário */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Adicione mais estilos globais conforme necessário */
+
+/* Estilização básica para o header e footer (placeholders) */
+.app-header {
+  background-color: #003366; /* Azul escuro, inspirado no site da Caixa */
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.app-footer {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+/* Estilização para o componente de busca de imóveis (placeholder) */
+.search-filters-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.search-filters-container h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.filter-item label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-item input[type="text"],
+.filter-item select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.filter-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.filter-actions .search-button {
+  background-color: #0056b3; /* Azul mais escuro para o botão de busca */
+  color: white;
+}
+
+.filter-actions .advanced-filters-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* Estilização para os cards de imóveis (placeholder) */
+.property-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.property-card img.property-image {
+  width: 100%;
+  height: 200px; /* Altura fixa para a imagem */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  background-color: #eee; /* Cor de fundo enquanto a imagem carrega ou se não houver imagem */
+}
+
+.property-card .property-info {
+  padding: 15px;
+}
+
+.property-card .property-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #003366;
+}
+
+.property-card .property-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.property-card .property-price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #d9534f; /* Um tom de vermelho para o preço */
+  margin-bottom: 10px;
+}
+
+.property-card .property-original-price {
+  font-size: 0.9em;
+  color: #777;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.property-card .property-discount {
+  display: inline-block;
+  background-color: #5cb85c; /* Verde para o desconto */
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.property-card .property-details-link {
+  display: block;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.property-card .property-details-link:hover {
+  background-color: #003d80;
+}
+
+
+/* Estilos para a seção de destaques/categorias (como no site de referência) */
+.highlight-section {
+  margin-bottom: 30px;
+}
+
+.highlight-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.highlight-card {
+  background-color: #0056b3; /* Azul escuro */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.highlight-card img.icon {
+  width: 50px; /* Ajuste conforme necessário */
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.highlight-card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.highlight-card p {
+  font-size: 0.9em;
+  opacity: 0.9;
+  margin:0;
+}
+
+
+/* Estilos para o Footer (mais detalhado) */
+.app-footer-detailed {
+  background-color: #00274e; /* Um azul ainda mais escuro para o rodapé */
+  color: #ccc; /* Cor de texto mais clara para contraste */
+  padding: 40px 20px;
+  font-size: 0.9em;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.footer-column h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-social-media img {
+  width: 24px; /* Ajuste o tamanho dos ícones sociais */
+  height: 24px;
+  margin-right: 10px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer-social-media img:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #3c5a7c; /* Linha divisória mais sutil */
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+/* Estilos para o Header (mais detalhado) */
+.app-header-detailed {
+  background-color: #fff; /* Fundo branco para o header */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 40px; /* Ajuste a altura do seu logo */
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #003366; /* Cor principal para os links de navegação */
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  background-color: #e6f7ff; /* Um azul claro para hover/ativo */
+  color: #0056b3;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: 1px solid #003366;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #003366;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.auth-buttons button.primary {
+  background-color: #003366;
+  color: white;
+}
+
+.auth-buttons button.primary:hover {
+  background-color: #002244;
+}
+
+.auth-buttons button:not(.primary):hover {
+  background-color: #e6f7ff;
+}
+
+/* Adicione aqui media queries para responsividade se necessário */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* Exemplo: esconder navegação principal em telas menores, implementar menu hamburguer depois */
+  }
+  .footer-content {
+    grid-template-columns: 1fr; /* Coluna única no rodapé em telas menores */
+    text-align: center;
+  }
+  .footer-social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+

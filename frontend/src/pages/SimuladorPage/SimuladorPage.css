@@ -1,0 +1,24 @@
+/* frontend/src/pages/SimuladorPage/SimuladorPage.css */
+/* Reutilizando o estilo de .page-content-container do QuemSomosPage.css se for similar */
+/* Se precisar de estilos específicos para o simulador, adicione aqui */
+
+.simulador-content p {
+  line-height: 1.7;
+  color: #333;
+  font-size: 1.05em;
+  margin-bottom: 15px;
+}
+
+.simulador-form-placeholder {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.simulador-form-placeholder h3 {
+  color: #0056b3;
+  margin-top: 0;
+}

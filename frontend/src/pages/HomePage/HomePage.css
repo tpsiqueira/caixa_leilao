@@ -1,0 +1,114 @@
+/* frontend/src/pages/HomePage/HomePage.css */
+
+.page-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section {
+    background-color: #003366; /* Azul escuro da Caixa */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* Estilos para SearchFilters já estão em global.css, mas podem ser especializados aqui se necessário */
+
+/* Estilos para HighlightCategories já estão em global.css */
+
+.info-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.info-section.info-section-reverse {
+    flex-direction: row-reverse;
+}
+
+.info-section .info-text {
+    flex: 1;
+}
+
+.info-section .info-text h2 {
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.info-section .info-text p,
+.info-section .info-text ul {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-section .info-text ul {
+    padding-left: 20px;
+}
+
+.info-section .info-image {
+    flex: 1;
+    max-width: 400px; /* Limita o tamanho da imagem */
+}
+
+.info-section .info-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cta-button {
+    background-color: #ffc107; /* Amarelo característico da Caixa */
+    color: #003366; /* Texto escuro para contraste */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #e0a800; /* Amarelo um pouco mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* Media queries para responsividade das seções de informação */
+@media (max-width: 768px) {
+    .info-section,
+    .info-section.info-section-reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-section .info-image {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .info-section .info-text h2 {
+        font-size: 1.5em;
+    }
+}
+

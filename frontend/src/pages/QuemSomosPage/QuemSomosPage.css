@@ -1,0 +1,36 @@
+/* frontend/src/pages/QuemSomosPage/QuemSomosPage.css */
+.page-content-container {
+  max-width: 900px; /* Limita a largura do conteúdo principal da página */
+  margin: 0 auto 40px auto; /* Centraliza e adiciona margem inferior */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.quem-somos-content section {
+  margin-bottom: 30px;
+}
+
+.quem-somos-content h2 {
+  color: #003366;
+  border-bottom: 2px solid #e6f7ff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.quem-somos-content p, .quem-somos-content ul li {
+  line-height: 1.7;
+  color: #333;
+  font-size: 1.05em;
+}
+
+.quem-somos-content ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+.quem-somos-content ul li strong {
+  color: #0056b3;
+}
