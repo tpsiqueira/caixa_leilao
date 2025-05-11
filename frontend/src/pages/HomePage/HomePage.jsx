@@ -92,6 +92,13 @@ const HighlightCategories = () => (
   </div>
 );
 
+
+
+
+
+
+
+
 const InfoSection = ({ title, children, imageSrc, imageAlt, reverseOrder }) => (
   <div className={`info-section page-section ${reverseOrder ? 'info-section-reverse' : ''}`}>
     <div className="info-text">

@@ -1,0 +1,53 @@
+/* frontend/src/pages/PropertySearchPage/PropertySearchPage.css */
+.property-search-page {
+  padding: 20px;
+  max-width: 1800px; /* Define uma largura máxima para a página de busca */
+  margin: 0 auto; /* Centraliza a página de busca */
+}
+
+.page-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.property-list-container {
+  display: grid;
+  /* Por padrão, 1 coluna para telas pequenas */
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px; /* Espaçamento entre os cards */
+}
+
+/* Telas pequenas (ex: smartphones) - 1 coluna já é o padrão */
+
+/* Telas médias (ex: tablets) - 2 colunas */
+@media (min-width: 600px) {
+  .property-list-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telas um pouco maiores - 3 colunas */
+@media (min-width: 900px) {
+  .property-list-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Telas grandes (ex: desktops) - 4 colunas */
+@media (min-width: 1200px) {
+  .property-list-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Telas extra grandes - 5 colunas, conforme solicitado */
+@media (min-width: 1500px) {
+  .property-list-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+

@@ -1,0 +1,150 @@
+/* frontend/src/components/features/PropertyCard.css */
+.property-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Para que o card inteiro seja o link */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden; /* Para arredondar as bordas da imagem também */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-card-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Garante que todos os cards tenham a mesma altura se estiverem em um grid flexível */
+}
+
+.property-card-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* Proporção 3:2 para a imagem (200/300 * 100) */
+  overflow: hidden;
+}
+
+.property-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra o container sem distorcer */
+  transition: transform 0.3s ease;
+}
+
+.property-card-link:hover .property-card-image {
+  transform: scale(1.05);
+}
+
+.property-card-discount-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c; /* Vermelho para desconto */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.property-card-status-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #3498db; /* Azul para status */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.property-card-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.property-card-image-container:hover .property-card-nav-arrow {
+  opacity: 1;
+}
+
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
+}
+
+.property-card-info {
+  padding: 15px;
+  flex-grow: 1; /* Faz com que esta parte cresça para preencher o card */
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card-type {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.property-card-location {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.property-card-address {
+  font-size: 0.85em;
+  color: #777;
+  margin-bottom: 10px;
+  min-height: 34px; /* Para alinhar cards com endereços de tamanhos diferentes */
+}
+
+.property-card-area {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+  cursor: help; /* Indica que há um tooltip */
+}
+
+.property-card-assessment {
+  font-size: 0.8em;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.property-card-deadline {
+  font-size: 0.8em;
+  color: #e74c3c; /* Cor de destaque para o prazo */
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.property-card-price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #27ae60; /* Verde para preço */
+  margin-top: auto; /* Empurra o preço para o final do card */
+}
+
